@@ -449,9 +449,37 @@ with st.sidebar:
     
     # Portfolio section
     st.markdown("### Portfolio")
+    
+    # Portfolio card with logo
     st.markdown(
-        "<div style='text-align: center; padding: 1rem; background: #f8f9fa; border-radius: 6px; margin: 1rem 0;'>"
-        "<p style='margin: 0 0 0.5rem 0; color: #666; font-size: 0.9rem;'>Developed by</p>"
+        "<div style='text-align: center; padding: 1rem; background: #f8f9fa; border-radius: 6px; margin: 1rem 0;'>",
+        unsafe_allow_html=True
+    )
+    
+    # Display logo (clickable via markdown link)
+    try:
+        import base64
+        with open("logo.png", "rb") as img_file:
+            img_data = img_file.read()
+            img_base64 = base64.b64encode(img_data).decode()
+        
+        st.markdown(
+            f"<a href='https://soulef-bentorki.vercel.app' target='_blank' style='display: inline-block; text-decoration: none;'>"
+            f"<img src='data:image/png;base64,{img_base64}' style='max-width: 120px; height: auto; margin-bottom: 0.75rem; border-radius: 4px; cursor: pointer;' />"
+            f"</a>",
+            unsafe_allow_html=True
+        )
+    except FileNotFoundError:
+        st.warning("Logo image not found")
+    except Exception:
+        # Fallback: use st.image if base64 fails
+        try:
+            st.image("logo.png", width=120, use_container_width=False)
+        except:
+            pass
+    
+    st.markdown(
+        "<p style='margin: 0.5rem 0 0.5rem 0; color: #666; font-size: 0.9rem;'>Developed by</p>"
         "<a href='https://soulef-bentorki.vercel.app' target='_blank' "
         "style='color: #4a90e2; text-decoration: none; font-weight: 600; font-size: 1rem;'>"
         "Soulef Bentorki</a><br>"
