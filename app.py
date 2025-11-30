@@ -1,24 +1,3 @@
-"""
-Fake News Detector - Streamlit Application
-
-A production-quality application for detecting fake news using machine learning.
-Uses logistic regression model and TF-IDF vectorizer for predictions.
-
-Installation:
-    pip install streamlit pandas numpy joblib scikit-learn matplotlib
-
-Usage:
-    streamlit run app.py
-
-Requirements:
-    - vectorizer.jb (TF-IDF vectorizer saved with joblib)
-    - lr_model.jb (Logistic regression model saved with joblib)
-    - True.csv (Dataset with true news articles)
-    - Fake.csv (Dataset with fake news articles)
-
-All files should be in the same directory as app.py.
-"""
-
 import streamlit as st
 import pandas as pd
 import numpy as np
