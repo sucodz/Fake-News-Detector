@@ -444,6 +444,23 @@ with st.sidebar:
             )
         else:
             st.warning("No data available to download")
+    
+    st.markdown("---")
+    
+    # Portfolio section
+    st.markdown("### Portfolio")
+    st.markdown(
+        "<div style='text-align: center; padding: 1rem; background: #f8f9fa; border-radius: 6px; margin: 1rem 0;'>"
+        "<p style='margin: 0 0 0.5rem 0; color: #666; font-size: 0.9rem;'>Developed by</p>"
+        "<a href='https://soulef-bentorki.vercel.app' target='_blank' "
+        "style='color: #4a90e2; text-decoration: none; font-weight: 600; font-size: 1rem;'>"
+        "Soulef Bentorki</a><br>"
+        "<a href='https://soulef-bentorki.vercel.app' target='_blank' "
+        "style='color: #4a90e2; text-decoration: none; font-size: 0.85rem; margin-top: 0.5rem; display: inline-block;'>"
+        "View Portfolio →</a>"
+        "</div>",
+        unsafe_allow_html=True
+    )
 
 
 # Main content tabs
@@ -732,7 +749,9 @@ with tab2:
 st.markdown("---")
 st.markdown(
     "<div style='text-align: center; color: #999; padding: 1rem; font-size: 0.85rem;'>"
-    "Fake News Detector | Powered by Machine Learning"
+    "Fake News Detector | Powered by Machine Learning & Python<br>"
+    "Developed by <a href='https://soulef-bentorki.vercel.app' target='_blank' style='color: #4a90e2; text-decoration: none; font-weight: 500;'>Soulef Bentorki</a> | "
+    "<a href='https://soulef-bentorki.vercel.app' target='_blank' style='color: #4a90e2; text-decoration: none;'>View Portfolio</a>"
     "</div>",
     unsafe_allow_html=True
 )
